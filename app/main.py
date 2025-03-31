@@ -19,7 +19,7 @@ def download_video(url):
 
     ydl_opts = {
         'format': 'best',
-        'outtmpl': 'downloaded_video.%(ext)s',
+        'outtmpl': '/tmp/downloaded_video.%(ext)s',  # Save to /tmp for serverless compatibility
     }
 
     with yt_dlp.YoutubeDL(ydl_opts) as ydl:
