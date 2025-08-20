@@ -25,12 +25,14 @@ def download_video_or_audio():
                 'preferredcodec': 'mp3',
                 'preferredquality': '128',
             }],
+            'cookiefile': 'cookies.txt',  # <-- Add this line
         }
     elif download_type == 'video':
         output_filename = f"{filename}.mp4"
         ydl_opts = {
             'format': 'best',
             'outtmpl': output_filename,
+            'cookiefile': 'cookies.txt',  # <-- Add this line
         }
     else:
         return {"error": "Invalid 'type' parameter. Use 'audio' or 'video'."}, 400
