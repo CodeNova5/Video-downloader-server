@@ -6,7 +6,7 @@ import os
 app = Flask(__name__)
 
 # Enable CORS for requests from your Vercel site
-CORS(app, resources={r"/*": {"origins": "https://tunebay.vercel.app"}})
+CORS(app, resources={r"/*": {"origins": ""}})
 
 @app.route('/download', methods=['GET'])
 def download_video_or_audio():
